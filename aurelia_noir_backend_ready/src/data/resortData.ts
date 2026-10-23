@@ -1,0 +1,671 @@
+import { Suite, Experience, DiningVenue, GalleryItem } from '../types';
+
+// Asset references — 14 distinct luxury photographs
+export const RESORT_IMAGES = {
+  heroOcean: '/src/assets/images/hero_obsidian_ocean_1792749426751.jpg',
+  heroRetreat: '/src/assets/images/hero_cliffside_retreat_1792749426468.jpg',
+  heroCliffsideRetreat: '/src/assets/images/hero_cliffside_retreat_1792749426468.jpg',
+  heroPresidentialSuite: '/src/assets/images/hero_presidential_suite_1792749427483.jpg',
+  retreatCliffVillas: '/src/assets/images/retreat_cliff_villas_1792749427826.jpg',
+  suiteMasterBedroom: '/src/assets/images/suite_master_bedroom_1792749449714.jpg',
+  suitePenthouseTerrace: '/src/assets/images/suite_penthouse_terrace_1792751893410.jpg',
+  villaCoveWaterfront: '/src/assets/images/villa_cove_waterfront_1792751893312.jpg',
+  spaHydrotherapy: '/src/assets/images/spa_wellness_hydrotherapy_1792749448359.jpg',
+  yachtExcursion: '/src/assets/images/yacht_excursion_1792749449703.jpg',
+  starlightObservatory: '/src/assets/images/starlight_observatory_deck_1792751896368.jpg',
+  culinaryPlating: '/src/assets/images/culinary_chef_plating_1792751895225.jpg',
+  diningSignature: '/src/assets/images/dining_signature_experience_1792749426829.jpg',
+  wineCellarVault: '/src/assets/images/wine_cellar_vault_1792751894144.jpg',
+  restaurantOutdoorLounge: '/src/assets/images/restaurant_outdoor_lounge_1792751894800.jpg',
+};
+
+export const RESORT_METRICS = [
+  { label: 'Coastal Acres', value: '42', detail: 'Protected oceanfront sanctuary' },
+  { label: 'Private Residences', value: '18', detail: 'Guaranteed seclusion' },
+  { label: 'Horizon Pools', value: '18', detail: 'Heated private stone pools' },
+  { label: 'Staff to Guest Ratio', value: '4 : 1', detail: 'Personalised round-the-clock service' },
+];
+
+export const SUITES_DATA: Suite[] = [
+  {
+    id: 'the-obsidian-presidential-sanctuary',
+    name: 'The Presidential Sanctuary',
+    subtitle: 'The Crown Residence at Cliff Crest',
+    category: 'penthouse-sanctuary',
+    categoryLabel: 'Penthouse Sanctuary',
+    headline: 'Two expansive levels overlooking the open ocean.',
+    description: 'Perched on the highest point of the resort, the Presidential Sanctuary spans over 5,200 square feet. Featuring dark walnut woodwork, fluted bronze accents, and full-height glass walls, this residence offers sweeping ocean horizons from every room.',
+    editorialQuote: 'A calm space designed for absolute privacy and complete comfort.',
+    specs: {
+      indoorSqFt: 5200,
+      terraceSqFt: 2100,
+      bedrooms: 3,
+      bathrooms: 4,
+      maxGuests: 6,
+      poolLengthMeters: 22,
+      view: 'Direct Ocean Sunset',
+      level: 'Upper Promontory (Private Elevator)',
+    },
+    features: [
+      '22m Heated black stone infinity pool',
+      'Private sommelier wine collection with 120 bottles',
+      'Dual master suites with freestanding stone soaking tubs',
+      'Dedicated personal butler and private chef',
+      'Private wellness sauna and steam room',
+      'Secure private garage and private elevator',
+    ],
+    amenities: [
+      {
+        title: 'Master Bedrooms',
+        items: [
+          'Handcrafted king mattresses with pure Italian linen',
+          'Private acoustic media room and library',
+          'Spacious dressing rooms with custom bronze fixtures',
+        ],
+      },
+      {
+        title: 'Bath & Wellness',
+        items: [
+          'Monolithic stone soaking tub overlooking the water',
+          'Rain showers with eucalyptus aromatherapy',
+          'Organic botanical bath and skincare products',
+        ],
+      },
+      {
+        title: 'Personal Service',
+        items: [
+          'Dedicated butler available 24 hours a day',
+          'Complimentary airport luxury car or helicopter transfer',
+          'Private sunset cruise aboard the resort motor yacht',
+        ],
+      },
+    ],
+    pricePerNight: 8500,
+    featured: true,
+    images: {
+      hero: RESORT_IMAGES.heroPresidentialSuite,
+      gallery: [
+        RESORT_IMAGES.heroPresidentialSuite,
+        RESORT_IMAGES.suiteMasterBedroom,
+        RESORT_IMAGES.suitePenthouseTerrace,
+      ],
+      caption: 'The main living salon of the Presidential Sanctuary at twilight.',
+    },
+  },
+  {
+    id: 'cliff-edge-infinity-villa',
+    name: 'Cliff Edge Infinity Villa',
+    subtitle: 'Dramatic Oceanfront Terrace & Pool',
+    category: 'cliff-villa',
+    categoryLabel: 'Cliff Villa',
+    headline: 'Suspended above the waves with a private heated pool.',
+    description: 'Built directly into the volcanic cliffs, this villa is designed for indoor-outdoor living. Glass pocket doors open to an expansive stone terrace with loungers, an outdoor dining table, and an infinity pool that meets the ocean horizon.',
+    editorialQuote: 'Watch the sun set over the sea from your own heated pool.',
+    specs: {
+      indoorSqFt: 3400,
+      terraceSqFt: 1450,
+      bedrooms: 2,
+      bathrooms: 3,
+      maxGuests: 4,
+      poolLengthMeters: 16,
+      view: 'Panoramic Ocean Sunset',
+      level: 'Cliff Tier Two',
+    },
+    features: [
+      '16m Private heated infinity pool',
+      'Basalt stone terrace with outdoor fire pit',
+      'Modern open kitchen with premium appliances',
+      'Cozy fireplace in the main living room',
+      'Oceanfront reading room with curated books',
+      'Daily complimentary champagne and sunset aperitif',
+    ],
+    amenities: [
+      {
+        title: 'Living Spaces',
+        items: [
+          'Natural oak wood paneling with soft ambient lighting',
+          'Premium acoustic sound system in every room',
+          'Handwoven wool rugs and comfortable custom sofas',
+        ],
+      },
+      {
+        title: 'Outdoor Living',
+        items: [
+          'Heated outdoor loungers with soft blankets',
+          'Outdoor rain shower surrounded by natural stone',
+          'Covered dining pavilion for six guests',
+        ],
+      },
+      {
+        title: 'Guest Privileges',
+        items: [
+          'Personal host to arrange dinner and excursions',
+          'Full unpacking and wardrobe service',
+          'Guaranteed premier table at Noir & Mare',
+        ],
+      },
+    ],
+    pricePerNight: 5400,
+    featured: true,
+    images: {
+      hero: RESORT_IMAGES.retreatCliffVillas,
+      gallery: [
+        RESORT_IMAGES.retreatCliffVillas,
+        RESORT_IMAGES.heroPresidentialSuite,
+        RESORT_IMAGES.villaCoveWaterfront,
+      ],
+      caption: 'Private sun terrace and infinity pool during evening golden hour.',
+    },
+  },
+  {
+    id: 'azure-master-pavilion',
+    name: 'Azure Master Pavilion',
+    subtitle: 'An Intimate Coastal Retreat for Two',
+    category: 'master-pavilion',
+    categoryLabel: 'Master Pavilion',
+    headline: 'Quiet comfort, natural linen, and endless horizon views.',
+    description: 'Created for couples seeking peace and privacy. The Azure Master Pavilion combines warm ivory textures with dark timber. The king bedroom looks straight out across the ocean, letting you greet each sunrise from bed.',
+    editorialQuote: 'A peaceful, beautifully proportioned haven for two.',
+    specs: {
+      indoorSqFt: 2200,
+      terraceSqFt: 950,
+      bedrooms: 1,
+      bathrooms: 2,
+      maxGuests: 2,
+      poolLengthMeters: 12,
+      view: 'Endless Ocean & Starry Sky',
+      level: 'Cliff Tier Three',
+    },
+    features: [
+      '12m Private heated plunge pool',
+      'Freestanding deep stone tub with sea views',
+      'Sunken outdoor lounge with warm fire table',
+      'High-fidelity turntable with classic acoustic vinyl records',
+      'Private walking path to the resort beach',
+      'Artisanal breakfast served on your terrace each morning',
+    ],
+    amenities: [
+      {
+        title: 'Bedroom Highlights',
+        items: [
+          'Open-plan layout with effortless ocean views',
+          'Motorized linen shades for complete darkness when desired',
+          'In-room espresso bar and fine tea selection',
+        ],
+      },
+      {
+        title: 'Wellness',
+        items: [
+          'In-villa couples massage setup available on request',
+          'Yoga mats and meditation cushions on the terrace',
+          'Soft cashmere bathrobes and luxury slippers',
+        ],
+      },
+      {
+        title: 'Complimentary',
+        items: [
+          'High-speed private Wi-Fi connectivity',
+          'Evening turndown with soothing aromatherapy mists',
+          'Daily access to the subterranean thermal spa',
+        ],
+      },
+    ],
+    pricePerNight: 3900,
+    featured: true,
+    images: {
+      hero: RESORT_IMAGES.suiteMasterBedroom,
+      gallery: [
+        RESORT_IMAGES.suiteMasterBedroom,
+        RESORT_IMAGES.retreatCliffVillas,
+        RESORT_IMAGES.suitePenthouseTerrace,
+      ],
+      caption: 'The master bedroom opens straight out onto the oceanfront balcony.',
+    },
+  },
+  {
+    id: 'noir-horizon-penthouse',
+    name: 'Noir Horizon Penthouse',
+    subtitle: 'Rooftop Living Above the Cliffs',
+    category: 'penthouse-sanctuary',
+    categoryLabel: 'Penthouse Sanctuary',
+    headline: 'Uninterrupted 270-degree ocean views with private rooftop pool.',
+    description: 'Set high above the resort, this penthouse offers wraparound timber decking, an outdoor infinity pool, and high glass ceilings that bring the ocean and sky into every room.',
+    editorialQuote: 'A sky-high ocean retreat designed for effortless entertaining.',
+    specs: {
+      indoorSqFt: 4100,
+      terraceSqFt: 1800,
+      bedrooms: 2,
+      bathrooms: 3,
+      maxGuests: 4,
+      poolLengthMeters: 18,
+      view: '270° Panoramic Ocean & Coastline',
+      level: 'Penthouse Level (Private Lift)',
+    },
+    features: [
+      '18m Rooftop infinity pool overlooking the ocean',
+      'Wraparound terrace with outdoor kitchen and bar',
+      'Two master suites with floor-to-ceiling glass walls',
+      'Wine cellar cabinet stocked with rare vintages',
+      'Direct terrace access to astronomical viewing station',
+      'Private host and butler throughout your stay',
+    ],
+    amenities: [
+      {
+        title: 'Architecture',
+        items: [
+          'Hand-finished bronze doorways and warm wood paneling',
+          'Floor-to-ceiling low-iron acoustic glass',
+          'Hanging modern fireplace in the sky lounge',
+        ],
+      },
+      {
+        title: 'Dining & Lounge',
+        items: [
+          'Eight-seat outdoor stone dining table',
+          'Fully equipped chef outdoor barbecue and cocktail bar',
+          'Sub-Zero wine chiller with international selections',
+        ],
+      },
+      {
+        title: 'Inclusions',
+        items: [
+          'Complimentary private coastal helicopter tour',
+          'Unlimited access to all spa thermal baths',
+          'Full unpacking, laundry, and packing service',
+        ],
+      },
+    ],
+    pricePerNight: 6900,
+    featured: false,
+    images: {
+      hero: RESORT_IMAGES.suitePenthouseTerrace,
+      gallery: [
+        RESORT_IMAGES.suitePenthouseTerrace,
+        RESORT_IMAGES.heroPresidentialSuite,
+        RESORT_IMAGES.suiteMasterBedroom,
+      ],
+      caption: 'The private cantilevered rooftop pool overlooking the Atlantic at sunset.',
+    },
+  },
+  {
+    id: 'secluded-cove-sanctuary',
+    name: 'Secluded Cove Sanctuary',
+    subtitle: 'Waterfront Living in a Protected Bay',
+    category: 'cliff-villa',
+    categoryLabel: 'Cliff Villa',
+    headline: 'Steps from the gentle tide in a private volcanic bay.',
+    description: 'Nestled at sea level in our most sheltered cove, this villa features private access to a tranquil tidal lagoon, stone sunbathing decks, a private teak boat dock, and calm coastal views.',
+    editorialQuote: 'Fall asleep to the gentle sound of the tide.',
+    specs: {
+      indoorSqFt: 2900,
+      terraceSqFt: 1200,
+      bedrooms: 2,
+      bathrooms: 2,
+      maxGuests: 4,
+      poolLengthMeters: 14,
+      view: 'Direct Cove Lagoon & Calm Water',
+      level: 'Sea Level (Private Shore Funicular)',
+    },
+    features: [
+      '14m Saltwater plunge pool fed by ocean tides',
+      'Private teak dock for small boat arrivals',
+      'Shaded daybeds set into natural rock grottos',
+      'Cedar wood soaking tub with water views',
+      'Complimentary carbon-fiber sea kayaks and paddleboards',
+      'Private beach evening fire with grilled coastal skewers',
+    ],
+    amenities: [
+      {
+        title: 'Cove Living',
+        items: [
+          'Teak wood floors and marine-grade bronze fixtures',
+          'Thick natural stone walls providing quiet acoustics',
+          'Fully stocked beach bar with fresh juices and champagne',
+        ],
+      },
+      {
+        title: 'Water Activities',
+        items: [
+          'Private guide for snorkeling the clear sea caves',
+          'Complimentary high-end snorkeling and diving gear',
+          'Direct radio link to the yacht captain for boat trips',
+        ],
+      },
+      {
+        title: 'Comforts',
+        items: [
+          'Heated stone floors in all bedrooms and bathrooms',
+          'Organic linen robes and waterproof beach totes',
+          'Fresh seafood delivery every afternoon at 4 PM',
+        ],
+      },
+    ],
+    pricePerNight: 4800,
+    featured: false,
+    images: {
+      hero: RESORT_IMAGES.villaCoveWaterfront,
+      gallery: [
+        RESORT_IMAGES.villaCoveWaterfront,
+        RESORT_IMAGES.retreatCliffVillas,
+        RESORT_IMAGES.yachtExcursion,
+      ],
+      caption: 'Private waterfront terrace, teak dock, and lagoon plunge pool.',
+    },
+  },
+];
+
+export const EXPERIENCES_DATA: Experience[] = [
+  {
+    id: 'the-subterranean-obsidian-spa',
+    title: 'The Subterranean Thermal Spa',
+    tagline: 'Warm mineral baths carved directly into volcanic rock.',
+    category: 'wellness',
+    categoryLabel: 'Wellness & Spa',
+    duration: '2 to 4 Hours',
+    curator: 'Dr. Elena Vasquez, Wellness Director',
+    description: 'Built within natural caverns beneath the cliff, our thermal spa provides mineral-rich thermal pools, cold sea-water plunge pools, and sound-bath relaxation under warm, candlelit stone arches.',
+    highlights: [
+      'Four thermal pools at varying soothing temperatures',
+      'Organic sea salt and mineral body treatments',
+      'Acoustic singing bowl sound bath in a natural stone grotto',
+      'Private massage rooms overlooking the ocean',
+    ],
+    image: RESORT_IMAGES.spaHydrotherapy,
+    inclusions: [
+      'Full thermal bath pass',
+      'Organic herbal tea service',
+      'Personalized wellness consultation',
+      'Relaxation salt room access',
+    ],
+    schedule: 'Open daily from 08:00 to 21:00 (Private evening bookings available)',
+  },
+  {
+    id: 'celestia-yacht-expedition',
+    title: 'Private Yacht Charter aboard Celestia',
+    tagline: 'Cruise secluded sea caves on our 78-foot luxury motor yacht.',
+    category: 'ocean',
+    categoryLabel: 'Ocean Experiences',
+    duration: 'Half Day (4 hrs) or Full Day (8 hrs)',
+    curator: 'Captain Marcus Lind',
+    description: 'Step aboard Celestia, Aurelia Noir’s private black-hulled motor yacht. Cruise along towering cliffs, swim in hidden crystal-blue coves, and enjoy a fresh five-course seafood lunch prepared on board by your private chef.',
+    highlights: [
+      'Explore hidden coastal caves and dramatic sea arches',
+      'Underwater Seabob scooters and guided reef snorkeling',
+      'Champagne lunch with fresh oysters and grilled lobster',
+      'Romantic sunset cruise with sommelier wine tastings',
+    ],
+    image: RESORT_IMAGES.yachtExcursion,
+    inclusions: [
+      'Licensed captain and attentive deck crew',
+      'Dedicated private chef and server',
+      'All snorkeling, Seabob, and water sports equipment',
+      'Complimentary champagne, cocktails, and refreshments',
+    ],
+    schedule: 'Daily departures at 09:30 and 15:30 from Private Marina Berth 4A',
+  },
+  {
+    id: 'cliffside-starlight-observatory',
+    title: 'Cliffside Starlight Observatory',
+    tagline: 'Explore the night sky under one of the clearest dark-sky regions.',
+    category: 'astronomy',
+    categoryLabel: 'Private Excursions',
+    duration: '2.5 Hours',
+    curator: 'Professor Mateo Silva, Astronomer',
+    description: 'With virtually no light pollution along our protected coast, the night sky is breathtakingly clear. Relax on heated loungers on our observatory terrace and view the stars through research-grade telescopes, accompanied by aged whiskey and artisan chocolates.',
+    highlights: [
+      'View distant planets and nebulae through a 16-inch computerized telescope',
+      'Guided laser tour of constellations and planetary movements',
+      'Tasting flight of rare single-malt whiskeys and fine dark chocolates',
+      'Heated terrace seating with warm cashmere blankets',
+    ],
+    image: RESORT_IMAGES.starlightObservatory,
+    inclusions: [
+      'Personal astronomer guide',
+      'Whiskey and artisan chocolate pairing flight',
+      'High-resolution night-sky digital photograph to take home',
+    ],
+    schedule: 'Tuesday through Sunday, 21:30 to midnight (Weather permitting)',
+  },
+  {
+    id: 'chef-foraging-and-crudo-masterclass',
+    title: 'Coastal Seafood & Crudo Masterclass',
+    tagline: 'Learn knife techniques and fresh seafood preparation with our head chef.',
+    category: 'culinary',
+    categoryLabel: 'Dining Experiences',
+    duration: '3 Hours',
+    curator: 'Chef Laurent Mercier',
+    description: 'Join Executive Chef Laurent Mercier in the kitchen atelier for an intimate masterclass. Learn the art of knife precision, delicate seafood crudo curing, and pairing dishes with crisp coastal wines.',
+    highlights: [
+      'Hands-on preparation of fresh local yellowtail and scallop crudo',
+      'Learn classical French sauce reductions and delicate citrus cures',
+      'Create custom seasonings using sea salt harvested on our rocks',
+      'Enjoy an intimate four-course lunch with paired wines',
+    ],
+    image: RESORT_IMAGES.culinaryPlating,
+    inclusions: [
+      'All culinary ingredients, chef apron, and gift knife',
+      'Four-course lunch paired with fine wines',
+      'Personal recipe booklet signed by Chef Laurent',
+    ],
+    schedule: 'Every Monday and Thursday at 10:30',
+  },
+];
+
+export const DINING_VENUES_DATA: DiningVenue[] = [
+  {
+    id: 'noir-and-mare',
+    name: 'Noir & Mare',
+    concept: 'Modern Seafood Fine Dining',
+    executiveChef: 'Chef Laurent Mercier',
+    hours: 'Dinner: 18:30 to 22:30 (Reservations Required)',
+    dressCode: 'Evening Elegant',
+    atmosphere: 'Candlelit tables overlooking crashing waves, dark marble, and floor-to-ceiling glass.',
+    description: 'Our signature oceanfront restaurant. Here, classical cooking meets the fresh bounty of the Atlantic. Dine above the nighttime waves on polished marble tables as you enjoy a choreographed seven-course tasting menu.',
+    image: RESORT_IMAGES.diningSignature,
+    menuHighlights: [
+      {
+        category: 'Starters',
+        items: [
+          {
+            name: 'Pan-Seared Sea Scallops',
+            description: 'Hand-dived scallops, squid ink sauce, crisp sea greens',
+            winePairing: 'Domaine Roulot Meursault',
+            signature: true,
+          },
+          {
+            name: 'Atlantic Bluefin Tuna Carpaccio',
+            description: 'Aged tuna, delicate caviar, smoked broth jelly, fresh citrus',
+            winePairing: 'Krug Grande Cuvée Champagne',
+            signature: true,
+          },
+        ],
+      },
+      {
+        category: 'Main Courses',
+        items: [
+          {
+            name: 'Stone-Roasted Wild Turbot',
+            description: 'Turbot roasted gently over hot volcanic stones, seaweed velouté',
+            winePairing: 'Puligny-Montrachet Premier Cru',
+            signature: true,
+          },
+          {
+            name: 'Butter-Poached Lobster Tail',
+            description: 'Sweet Atlantic rock lobster, roasted shallot puree, aromatic herbs',
+            winePairing: 'Domaine Dujac Burgundy',
+            signature: false,
+          },
+        ],
+      },
+      {
+        category: 'Dessert',
+        items: [
+          {
+            name: 'Warm Dark Chocolate Sphere',
+            description: 'Venezuelan dark chocolate, smoked salted caramel, bourbon vanilla gelato',
+            winePairing: 'Vintage Port Reserve',
+            signature: true,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'the-sommelier-vault',
+    name: 'The Wine Cellar Vault',
+    concept: 'Private Tastings & Rare Vintages',
+    executiveChef: 'Head Sommelier Camille Dupuis',
+    hours: 'Tastings: 17:00 to 22:00 by Appointment',
+    dressCode: 'Smart Casual',
+    atmosphere: 'Atmospheric stone vault housing 3,200 bottles, with an ancient oak tasting table.',
+    description: 'Carved directly into the rock, our temperature-controlled cellar is home to rare vintages from legendary European vineyards and unique volcanic soils. Book private guided tastings with our head sommelier.',
+    image: RESORT_IMAGES.wineCellarVault,
+    menuHighlights: [
+      {
+        category: 'Curated Tasting Flights',
+        items: [
+          {
+            name: 'Volcanic Island Terroirs (5 Glasses)',
+            description: 'Crisp white and structured red wines from Canary and Azores volcanic soils, served with aged cheeses and cured meats.',
+          },
+          {
+            name: 'Grand Cru Horizon Flight (4 Glasses)',
+            description: 'First Growth Bordeaux and Grand Cru Burgundy selections served in crystal stemware with caviar blinis.',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'solarium-raw-bar',
+    name: 'The Oceanfront Lounge & Raw Bar',
+    concept: 'Daytime Coastal Dining & Sunset Cocktails',
+    executiveChef: 'Chef Mateo Ortiz',
+    hours: 'All Day: 11:30 to 23:30',
+    dressCode: 'Resort Casual',
+    atmosphere: 'Sunlit teak terrace with panoramic ocean views, gentle sea breezes, and open fire pits.',
+    description: 'The relaxed social center of the resort. Enjoy fresh oysters opened to order, vibrant ceviche, chilled prawns, and handcrafted botanical cocktails as the sun sinks into the sea.',
+    image: RESORT_IMAGES.restaurantOutdoorLounge,
+    menuHighlights: [
+      {
+        category: 'Raw Bar Favorites',
+        items: [
+          {
+            name: 'Fresh Coastal Oysters (Dozen)',
+            description: 'Three varieties of cold-water oysters served on ice with champagne mignonette and fresh lemon.',
+          },
+          {
+            name: 'Chilled Wild Seabass Ceviche',
+            description: 'Fresh seabass cured in lime and cucumber juice, charred avocado, crisp purple corn.',
+          },
+        ],
+      },
+    ],
+  },
+];
+
+export const GALLERY_ITEMS: GalleryItem[] = [
+  {
+    id: 'g1',
+    title: 'The Twilight Coastline',
+    category: 'coastline',
+    categoryLabel: 'Coastline',
+    location: 'North Promontory',
+    image: RESORT_IMAGES.heroOcean,
+    caption: 'Dramatic volcanic cliffs meeting the Atlantic as evening sets in.',
+    cameraInfo: 'Medium Format · 35mm · f/8',
+  },
+  {
+    id: 'g2',
+    title: 'Cliffside Cantilevers & Horizon Pool',
+    category: 'architecture',
+    categoryLabel: 'Architecture',
+    location: 'Central Pavilion',
+    image: RESORT_IMAGES.heroRetreat,
+    caption: 'Modern stone pavilions illuminated over the quiet evening sea.',
+    cameraInfo: 'Leica S3 · 45mm · f/5.6',
+  },
+  {
+    id: 'g3',
+    title: 'The Presidential Salon & Hearth',
+    category: 'suites',
+    categoryLabel: 'Suites & Living',
+    location: 'Presidential Sanctuary',
+    image: RESORT_IMAGES.heroPresidentialSuite,
+    caption: 'Dark walnut woodwork, bronze lighting, and floor-to-ceiling ocean views.',
+    cameraInfo: 'Phase One · 28mm · f/11',
+  },
+  {
+    id: 'g4',
+    title: 'Private Pool Terrace at Sunset',
+    category: 'suites',
+    categoryLabel: 'Suites & Living',
+    location: 'Cliff Edge Infinity Villa',
+    image: RESORT_IMAGES.retreatCliffVillas,
+    caption: 'Heated stone infinity pool overlooking the setting sun.',
+    cameraInfo: 'Sony A1 · 24-70mm · f/4',
+  },
+  {
+    id: 'g5',
+    title: 'Rooftop Penthouse Infinity Pool',
+    category: 'suites',
+    categoryLabel: 'Suites & Living',
+    location: 'Horizon Penthouse',
+    image: RESORT_IMAGES.suitePenthouseTerrace,
+    caption: 'Cantilevered glass swimming pool high above the coastline.',
+    cameraInfo: 'Canon R5 · 24mm · f/4.5',
+  },
+  {
+    id: 'g6',
+    title: 'Secluded Waterfront Cove Villa',
+    category: 'architecture',
+    categoryLabel: 'Architecture',
+    location: 'Cathedral Cove',
+    image: RESORT_IMAGES.villaCoveWaterfront,
+    caption: 'Stone villa with private teak boat dock and clear turquoise lagoon.',
+    cameraInfo: 'Hasselblad · 50mm · f/6.3',
+  },
+  {
+    id: 'g7',
+    title: 'Thermal Cave Baths & Candlelight',
+    category: 'wellness',
+    categoryLabel: 'Wellness & Spa',
+    location: 'The Obsidian Spa',
+    image: RESORT_IMAGES.spaHydrotherapy,
+    caption: 'Subterranean volcanic rock pool illuminated with floating candles.',
+    cameraInfo: 'Fujifilm GFX · 32mm · f/4',
+  },
+  {
+    id: 'g8',
+    title: 'Sunset Fine Dining at Noir & Mare',
+    category: 'gastronomy',
+    categoryLabel: 'Gastronomy',
+    location: 'Signature Restaurant',
+    image: RESORT_IMAGES.diningSignature,
+    caption: 'Candlelight dining on polished marble with direct views of crashing waves.',
+    cameraInfo: 'Leica M11 · 50mm f/1.2',
+  },
+];
+
+export const FAQS = [
+  {
+    question: 'How do guests arrive at Aurelia Noir?',
+    answer: 'Guests typically arrive via direct helicopter transfer from the international airport (18 minutes flight time to private pad AN-PAD 01), or by chauffeured luxury car (45 minutes via the private coastal drive). Yacht arrivals may moor directly at Marina Berth 4A with prior harbormaster clearance.',
+  },
+  {
+    question: 'What is the minimum stay policy?',
+    answer: 'To preserve the tranquil atmosphere and restful rhythm of the estate, we maintain a two-night minimum stay throughout the year, and a four-night minimum stay during major seasonal holidays.',
+  },
+  {
+    question: 'Can children stay at the resort?',
+    answer: 'Because of our dramatic cliffside topography and peaceful atmosphere, Aurelia Noir primarily welcomes adult guests and young adults aged 14 and older. Private whole-resort buyouts can accommodate families of all ages.',
+  },
+  {
+    question: 'What is included in the nightly residence rate?',
+    answer: 'Every stay includes daily artisanal champagne breakfast, non-alcoholic in-suite bar refreshments, high-speed Wi-Fi, and unlimited access to the subterranean spa thermal circuits. Fine dining tasting menus, yacht charters, and helicopter tours are arranged separately by your personal host.',
+  },
+  {
+    question: 'What is the cancellation policy?',
+    answer: 'Reservations may be modified or cancelled with a full refund up to 30 days before arrival. Because we have only 18 residences, cancellations within 30 days are subject to deposit retention unless the suite is reserved by another guest.',
+  },
+];

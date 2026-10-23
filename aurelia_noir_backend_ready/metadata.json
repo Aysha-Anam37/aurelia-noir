@@ -1,0 +1,6 @@
+{
+  "name": "Aurelia Noir — Ultra-Luxury Coastal Resort",
+  "description": "Escape the ordinary. A private world of extraordinary stays, architectural cliffside villas, and cinematic luxury hospitality.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
