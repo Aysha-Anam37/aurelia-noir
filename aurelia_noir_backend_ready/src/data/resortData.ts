@@ -2,21 +2,21 @@ import { Suite, Experience, DiningVenue, GalleryItem } from '../types';
 
 // Asset references — 14 distinct luxury photographs
 export const RESORT_IMAGES = {
-  heroOcean: '/src/assets/images/hero_obsidian_ocean_1792749426751.jpg',
-  heroRetreat: '/src/assets/images/hero_cliffside_retreat_1792749426468.jpg',
-  heroCliffsideRetreat: '/src/assets/images/hero_cliffside_retreat_1792749426468.jpg',
-  heroPresidentialSuite: '/src/assets/images/hero_presidential_suite_1792749427483.jpg',
-  retreatCliffVillas: '/src/assets/images/retreat_cliff_villas_1792749427826.jpg',
-  suiteMasterBedroom: '/src/assets/images/suite_master_bedroom_1792749449714.jpg',
-  suitePenthouseTerrace: '/src/assets/images/suite_penthouse_terrace_1792751893410.jpg',
-  villaCoveWaterfront: '/src/assets/images/villa_cove_waterfront_1792751893312.jpg',
-  spaHydrotherapy: '/src/assets/images/spa_wellness_hydrotherapy_1792749448359.jpg',
-  yachtExcursion: '/src/assets/images/yacht_excursion_1792749449703.jpg',
-  starlightObservatory: '/src/assets/images/starlight_observatory_deck_1792751896368.jpg',
-  culinaryPlating: '/src/assets/images/culinary_chef_plating_1792751895225.jpg',
-  diningSignature: '/src/assets/images/dining_signature_experience_1792749426829.jpg',
-  wineCellarVault: '/src/assets/images/wine_cellar_vault_1792751894144.jpg',
-  restaurantOutdoorLounge: '/src/assets/images/restaurant_outdoor_lounge_1792751894800.jpg',
+  heroOcean: new URL('../assets/images/hero_obsidian_ocean_1792749426751.jpg', import.meta.url).href,
+  heroRetreat: new URL('../assets/images/hero_cliffside_retreat_1792749426468.jpg', import.meta.url).href,
+  heroCliffsideRetreat: new URL('../assets/images/hero_cliffside_retreat_1792749426468.jpg', import.meta.url).href,
+  heroPresidentialSuite: new URL('../assets/images/hero_presidential_suite_1792749427483.jpg', import.meta.url).href,
+  retreatCliffVillas: new URL('../assets/images/retreat_cliff_villas_1792749427826.jpg', import.meta.url).href,
+  suiteMasterBedroom: new URL('../assets/images/suite_master_bedroom_1792749449714.jpg', import.meta.url).href,
+  suitePenthouseTerrace: new URL('../assets/images/suite_penthouse_terrace_1792751893410.jpg', import.meta.url).href,
+  villaCoveWaterfront: new URL('../assets/images/villa_cove_waterfront_1792751893312.jpg', import.meta.url).href,
+  spaHydrotherapy: new URL('../assets/images/spa_wellness_hydrotherapy_1792749448359.jpg', import.meta.url).href,
+  yachtExcursion: new URL('../assets/images/yacht_excursion_1792749449703.jpg', import.meta.url).href,
+  starlightObservatory: new URL('../assets/images/starlight_observatory_deck_1792751896368.jpg', import.meta.url).href,
+  culinaryPlating: new URL('../assets/images/culinary_chef_plating_1792751895225.jpg', import.meta.url).href,
+  diningSignature: new URL('../assets/images/dining_signature_experience_1792749426829.jpg', import.meta.url).href,
+  wineCellarVault: new URL('../assets/images/wine_cellar_vault_1792751894144.jpg', import.meta.url).href,
+  restaurantOutdoorLounge: new URL('../assets/images/restaurant_outdoor_lounge_1792751894800.jpg', import.meta.url).href,
 };
 
 export const RESORT_METRICS = [
