@@ -90,6 +90,15 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
                 </button>
               );
             })}
+            <button
+              type="button"
+              onClick={() => setDirectoryOpen(true)}
+              aria-label="Open all ten website pages"
+              className="inline-flex items-center gap-1.5 whitespace-nowrap shrink-0 py-1 text-[12px] tracking-[0.12em] uppercase text-[#F4EFE5]/75 hover:text-[#E8C36B] transition-colors cursor-pointer"
+            >
+              <Compass className="w-3.5 h-3.5 text-[#E8C36B]" />
+              <span>Index (10)</span>
+            </button>
           </nav>
 
           {/* Zone 3: Single Prominent Reserve Button + Mobile Toggle */}
